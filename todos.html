@@ -1,0 +1,14 @@
+<div class="row">
+	<form id="todo-form" ng-submit="addTodo(todo)">
+                <input id="new-todo" placeholder="Que devez-vous faire ?" ng-model="todo.description" />
+            </form>
+<ul id="todo-list">
+                    <li ng-repeat="todo in todosdb" ng-class="{completed: todo.completed}">
+                        <div  class="view">
+                            <input class="mark" type="checkbox" ng-model="todo.completed" />
+                            <span>{{todo.description}}</span> 
+                            <span  class="close" ng-click="deleteTodo(todo)">x</span>
+                        </div>
+                    </li>
+                </ul>
+</div>	
